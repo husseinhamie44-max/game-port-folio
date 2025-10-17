@@ -1,168 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Game Development Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Portfolio | [Your Name]</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #222;
-      margin: 0;
-      padding: 20px;
+    :root {
+      --bg: #f9fafc;
+      --card: #ffffff;
+      --accent: #2563eb;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --radius: 12px;
     }
 
-    h1, h2 {
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 15px;
+    }
+
+    h1 {
       text-align: center;
-      color: #333;
+      font-size: 2.3rem;
+      margin-bottom: 5px;
+      color: var(--accent);
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: 500;
+      margin-bottom: 35px;
+      color: var(--muted);
+    }
+
+    .table-container {
+      max-width: 950px;
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 25px;
-      background: #fff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
     th, td {
-      border: 1px solid #ccc;
-      padding: 12px 16px;
+      padding: 18px 22px;
       text-align: left;
       vertical-align: top;
     }
 
     th {
-      background: #0078ff;
-      color: white;
-      font-size: 1.1em;
+      width: 30%;
+      font-weight: 600;
+      color: var(--accent);
+      background-color: #f3f4f6;
     }
 
-    tr:nth-child(even) {
-      background: #f9f9f9;
-    }
-
-    .section-title {
-      background: #222;
-      color: #fff;
-      font-weight: bold;
-      text-align: center;
-      font-size: 1.2em;
+    tr:nth-child(even) td {
+      background-color: #fafbfc;
     }
 
     ul {
-      margin: 0;
-      padding-left: 18px;
+      list-style: disc;
+      margin-left: 18px;
+    }
+
+    .section {
+      background-color: var(--accent);
+      color: white;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 0.5px;
     }
 
     footer {
       text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
       margin-top: 40px;
-      color: #555;
-      font-size: 0.9em;
+    }
+
+    @media (max-width: 700px) {
+      th {
+        display: block;
+        width: 100%;
+        background: var(--accent);
+        color: white;
+        border-radius: 6px 6px 0 0;
+      }
+
+      td {
+        display: block;
+        padding-top: 8px;
+      }
+
+      tr {
+        margin-bottom: 20px;
+        display: block;
+        border-radius: var(--radius);
+        background: var(--card);
+      }
+
+      .table-container {
+        box-shadow: none;
+      }
     }
   </style>
 </head>
 <body>
 
   <h1>🎮 Game Development Portfolio</h1>
-  <h2>By [Your Name]</h2>
+  <h2>by [Your Name]</h2>
 
-  <!-- Part 1: Game Overview -->
-  <table>
-    <tr class="section-title">
-      <td colspan="2">Part 1: Game Overview</td>
-    </tr>
-    <tr>
-      <th>What game did you use?</th>
-      <td>[e.g., Snake]</td>
-    </tr>
-    <tr>
-      <th>What changes did you make to the game visuals (HTML/CSS)?</th>
-      <td>
-        <ul>
-          <li>Changed the background color and game grid style.</li>
-          <li>Added a modern font and centered layout.</li>
-          <li>Improved button styles and animations.</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <th>What changes did you make to the gameplay (JavaScript)?</th>
-      <td>
-        <ul>
-          <li>Added a scoring system that increases with each food item.</li>
-          <li>Included a restart button for easy replay.</li>
-          <li>Adjusted game speed to increase difficulty over time.</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
+  <div class="table-container">
+    <table>
+      <!-- PART 1 -->
+      <tr class="section"><td colspan="2">Part 1: Game Overview</td></tr>
+      <tr>
+        <th>What game did you use?</th>
+        <td>Snake</td>
+      </tr>
+      <tr>
+        <th>What changes did you make to the visuals (HTML/CSS)?</th>
+        <td>
+          <ul>
+            <li>Modernized the color palette with a dark neon theme.</li>
+            <li>Added soft glow effects and smoother transitions.</li>
+            <li>Centered layout with responsive scaling for all devices.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th>What changes did you make to the gameplay (JavaScript)?</th>
+        <td>
+          <ul>
+            <li>Added progressive speed increase as the snake grows.</li>
+            <li>Implemented a score counter that updates live.</li>
+            <li>Added restart functionality without page reload.</li>
+          </ul>
+        </td>
+      </tr>
 
-  <!-- Part 2: Pseudocode -->
-  <table>
-    <tr class="section-title">
-      <td colspan="2">Part 2: Pseudocode</td>
-    </tr>
+      <!-- PART 2 -->
+      <tr class="section"><td colspan="2">Part 2: Pseudocode</td></tr>
 
-    <tr>
-      <th>A. Game Setup (What happens when the page loads)</th>
-      <td>
-        <ul>
-          <li>Initialize the canvas and draw the grid.</li>
-          <li>Set up player snake position and direction.</li>
-          <li>Spawn the first food randomly on the board.</li>
-        </ul>
-      </td>
-    </tr>
+      <tr>
+        <th>A. Game Setup (on page load)</th>
+        <td>
+          <ul>
+            <li>Initialize grid, snake starting position, and direction.</li>
+            <li>Spawn the first piece of food at a random location.</li>
+          </ul>
+        </td>
+      </tr>
 
-    <tr>
-      <th>B. Player Input (What happens when the player clicks or interacts)</th>
-      <td>
-        <ul>
-          <li>Detect arrow key or WASD input.</li>
-          <li>Change the snake’s direction based on input.</li>
-        </ul>
-      </td>
-    </tr>
+      <tr>
+        <th>B. Player Input (interaction)</th>
+        <td>
+          <ul>
+            <li>Listen for arrow key or WASD input.</li>
+            <li>Update snake direction accordingly, ignoring reverse moves.</li>
+          </ul>
+        </td>
+      </tr>
 
-    <tr>
-      <th>C. Game Logic (How the game decides what happens next)</th>
-      <td>
-        <ul>
-          <li>Move the snake in the current direction.</li>
-          <li>Check for collisions with walls or itself.</li>
-          <li>If snake eats food, grow and increase score.</li>
-        </ul>
-      </td>
-    </tr>
+      <tr>
+        <th>C. Game Logic (main loop)</th>
+        <td>
+          <ul>
+            <li>Move snake forward one cell each frame.</li>
+            <li>Check if snake collides with wall or itself → end game.</li>
+            <li>If snake eats food → grow length and add score.</li>
+          </ul>
+        </td>
+      </tr>
 
-    <tr>
-      <th>D. Scoring and End Conditions (What happens when someone wins, loses, or scores)</th>
-      <td>
-        <ul>
-          <li>If the snake hits a wall or itself, end the game.</li>
-          <li>Display the final score and “Game Over” message.</li>
-          <li>Allow restart button to reset game variables.</li>
-        </ul>
-      </td>
-    </tr>
+      <tr>
+        <th>D. Scoring and End Conditions</th>
+        <td>
+          <ul>
+            <li>Display current score in real time.</li>
+            <li>If collision detected → show “Game Over” overlay.</li>
+            <li>Allow player to restart from same screen.</li>
+          </ul>
+        </td>
+      </tr>
 
-    <tr>
-      <th>E. Additional Features (Anything else you added)</th>
-      <td>
-        <ul>
-          <li>Restart button to replay without refreshing.</li>
-          <li>Background music and sound effects.</li>
-          <li>Timer showing how long the player survived.</li>
-        </ul>
-      </td>
-    </tr>
-  </table>
+      <tr>
+        <th>E. Additional Features</th>
+        <td>
+          <ul>
+            <li>Added a restart button and live timer.</li>
+            <li>Implemented smooth movement and scaling animation.</li>
+            <li>Optional sound toggle for background music.</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
 
   <footer>
-    <p>© 2025 [Your Name] | Game Development Portfolio</p>
+    © 2025 [Your Name] • Game Portfolio Project
   </footer>
 
 </body>
